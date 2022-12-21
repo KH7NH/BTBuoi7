@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .box{
+            width: 600px;
+            height: 500px;
+            background-color: red;
+            margin-left: 200px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        .img img{
+            position: relative;
+            transition: 0.5s;
+            width: 700px;
+            height: 500px;
+            transform: translateX(-50px);
+            filter: grayscale(50%);
+        }
+        .content1{
+            position: absolute;
+            top: 350px;
+            left: 250px;
+            color: white;
+            font-size: 30px;
+            transform: translateY(0);
+            transition: 0.5s;
+        }
+        .box:hover .content1{
+            transform: translateY(-50px);
+        }
+        .content2{
+            font-size: 15px;
+            font-weight: 300;
+            position: absolute;
+            color: white;
+            top: 390px;
+            left: 250px;
+            opacity: 0;
+            transition: 0.5s;
+            transform: translateY(0);
+        }
+        .box:hover .content2{
+            opacity: 1;
+            transform: translateY(-50px);
+        }
+        .box:hover img{
+            transform: translateX(0);
+            filter: grayscale(0);
+        }
+        .content{
+            display: flex;
+            position: absolute;
+            color: white;
+            top: 780px;
+            left: 290px;
+        }
+        .box2{
+            width: 480px;
+            height: 360px;
+            background-color: gray;
+            margin-left: 200px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        .img2 img2{
+            position: relative;
+            transition: 0.5s;
+            width: 600px;
+            height: 500px;
+        }
+        .content{
+            transform: translateY(0);
+        }
+        .content__dreamy{
+            font-weight: 250;
+            transform: translateY(0);
+            transition: 0.5s;
+        }
+        .content__honey{
+            transform: translateY(0);
+            transition: 0.5s;
+        }
+        .content__now{
+            font-weight: 250;
+            opacity: 0;
+            transform: translateY(0);
+            transition: 0.5s;
+        }
+        .box2:hover .content__dreamy{
+            transform: translateY(40px);
+        }
+        .box2:hover .content__honey{
+            transform: translateY(40px);
+        }
+        .box2:hover .content__now{
+            transform: translateY(40px);
+            opacity: 1;
+        }
+        .line{
+            content: "";
+            position: absolute;
+            top: 915px;
+            left: 208px;
+            width: 480px;
+            height: 18px;
+            background-color: white;
+            transform: translateY(0);
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .box2:hover .line{
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+        .img2:hover{
+            filter: grayscale(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="img">
+            <img src="https://tympanus.net/Development/HoverEffectIdeas/img/12.jpg ">
+        </div>
+        <div>
+            <h1 class="content1">NICE LILY</h1>
+            <h2 class="content2">LILY LIKE TO PLAY WITH CRAYONS AND PENCILS</h2>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="img2">
+            <img src="https://tympanus.net/Development/HoverEffectIdeas/img/4.jpg" alt="">
+        </div>
+        <div class="content">
+            <h1 class="content__dreamy">DREAMY</h1>
+            <h1 class="content__honey">HONEY</h1>
+            <h1 class="content__now">NOW</h1>
+        </div>
+        <div class="line"></div>
+    </div>
+</body>
+</html>
